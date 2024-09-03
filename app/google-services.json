@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "182883555177",
+    "firebase_url": "https://amusementparkdb-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "amusementparkdb",
+    "storage_bucket": "amusementparkdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182883555177:android:8614cc9e430f32f5cbcff8",
+        "android_client_info": {
+          "package_name": "com.example.fyp2024"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmW1thlVZmMJBz6GsK8dPTU9sQZJkO-4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182883555177:android:9455da90865c0e77cbcff8",
+        "android_client_info": {
+          "package_name": "com.example.myapplication99999"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmW1thlVZmMJBz6GsK8dPTU9sQZJkO-4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

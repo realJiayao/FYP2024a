@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF6B00"
+    tools:context=".BookingAmount">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FF6B00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF6B00"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FBD472"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/Title_image_BookingAmount"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:radius="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toTopOf="@+id/header_image"
+                app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/app_title_BookingAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/front_title"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Title_image_BookingAmount" />
+
+
+            <TextView
+                android:id="@+id/EventSelected"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/facilitName_text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/app_title_BookingAmount" />
+
+
+            <TextView
+                android:id="@+id/AdultPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/EventSelected" />
+
+            <EditText
+                android:id="@+id/AdultAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#FFFDFD"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:minHeight="48dp"
+                android:text="1"
+                app:layout_constraintEnd_toEndOf="@+id/ChildrenAmount"
+                app:layout_constraintStart_toStartOf="@+id/ChildrenAmount"
+                app:layout_constraintTop_toBottomOf="@+id/EventSelected" />
+
+
+            <TextView
+                android:id="@+id/ChildrenPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/AdultPriceText"
+                app:layout_constraintTop_toBottomOf="@+id/AdultAmount" />
+
+
+            <EditText
+                android:id="@+id/ChildrenAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:minHeight="48dp"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toEndOf="@+id/ChildrenPriceText"
+                app:layout_constraintTop_toBottomOf="@+id/AdultAmount" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/TotalPrice">
+
+                <Button
+                    android:id="@+id/BookAmountBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:onClick="GotoBooking"
+                    android:text="@string/yesBtn" />
+
+                <Button
+                    android:id="@+id/CancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:onClick="BackBtn"
+                    android:text="@string/noBtn" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="total"
+                app:layout_constraintStart_toStartOf="@+id/ChildrenPriceText"
+                app:layout_constraintTop_toBottomOf="@+id/ChildrenAmount" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

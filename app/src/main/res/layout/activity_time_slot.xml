@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF6B00"
+    tools:context=".TimeSlot">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FF6B00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF6B00"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FBD472"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/Title_image_timeslot"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:radius="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toTopOf="@+id/header_image"
+                app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/app_title_timeslot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/front_title"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Title_image_timeslot" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/TimeSlot_backBtn"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/FacilityNameSelected">
+
+                <ListView
+                    android:id="@+id/TimeSlot_List"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/TimeSlot_backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:onClick="BackBtn"
+                android:text="@string/backBtn"
+                app:layout_constraintBottom_toBottomOf="@+id/header_image"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image" />
+
+            <TextView
+                android:id="@+id/FacilityNameSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/facilitName_text"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/app_title_timeslot" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

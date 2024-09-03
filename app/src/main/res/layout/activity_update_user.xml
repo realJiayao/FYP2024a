@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF6B00"
+    tools:context=".UpdateUser">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FF6B00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:background="#FF6B00"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF6B00"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FBD472"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Title_image_update"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:radius="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toTopOf="@+id/header_image"
+                app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/Update_email_Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="@+id/Update_email_Input"
+                app:layout_constraintTop_toBottomOf="@+id/app_title_update" />
+
+            <TextView
+                android:id="@+id/Update_password_Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/password"
+                app:layout_constraintStart_toStartOf="@+id/Update_password_Input"
+                app:layout_constraintTop_toBottomOf="@+id/Update_email_Input" />
+
+            <EditText
+                android:id="@+id/Update_email_Input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Update_email_Text" />
+
+            <EditText
+                android:id="@+id/Update_password_Input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Update_password_Text" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/Update_login_describe"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="8dp"-->
+            <!--                android:text="Have an account?"-->
+            <!--                app:layout_constraintBottom_toTopOf="@+id/Goto_LoginBtn"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/header_image" />-->
+
+            <TextView
+                android:id="@+id/Update_name_Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="@+id/Update_name_Input"
+                app:layout_constraintTop_toBottomOf="@+id/Update_password_Input" />
+
+            <TextView
+                android:id="@+id/Update_phone_Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/phone"
+                app:layout_constraintStart_toStartOf="@+id/Update_phone_Input"
+                app:layout_constraintTop_toBottomOf="@+id/Update_name_Input" />
+
+            <EditText
+                android:id="@+id/Update_name_Input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Update_name_Text" />
+
+            <EditText
+                android:id="@+id/Update_phone_Input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/phone"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Update_phone_Text" />
+
+            <Button
+                android:id="@+id/UpdateBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="Update"
+                android:text="@string/updateBtn"
+                app:layout_constraintEnd_toEndOf="@+id/Update_phone_Input"
+                app:layout_constraintStart_toStartOf="@+id/Update_phone_Input"
+                app:layout_constraintTop_toBottomOf="@+id/Update_phone_Input" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/Goto_LoginBtn"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="8dp"-->
+            <!--                android:onClick="Go_to_Login"-->
+            <!--                android:text="@string/loginBtn"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@+id/header_image"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/RegisterBtn"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/UpdateBtn" />-->
+
+            <TextView
+                android:id="@+id/app_title_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/front_title"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Title_image_update" />
+
+            <Button
+                android:id="@+id/Update_backBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="Back"
+                android:text="@string/backBtn"
+                app:layout_constraintBottom_toBottomOf="@+id/header_image"
+                app:layout_constraintEnd_toEndOf="@+id/UpdateBtn"
+                app:layout_constraintStart_toStartOf="@+id/UpdateBtn"
+                app:layout_constraintTop_toBottomOf="@+id/UpdateBtn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+<!--    </ScrollView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

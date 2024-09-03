@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF6B00"
+    tools:context=".StaffHome">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FF6B00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF6B00"
+            android:padding="4dp">
+
+
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FBD472"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Title_image_staff_home"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:radius="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toTopOf="@+id/header_image"
+                app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/app_title_staff_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/front_title"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Title_image_staff_home" />
+
+
+            <Button
+                android:id="@+id/Update_staff_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:onClick="GotoUpdate"
+                android:text="@string/update_userBtn"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/Option_text" />
+
+            <Button
+                android:id="@+id/Logout_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="Logout"
+                android:text="@string/logoutBtn"
+                app:cornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/Update_staff_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/Update_staff_button"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+            <TextView
+                android:id="@+id/Staff_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Hi"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/header_image"
+                app:layout_constraintStart_toStartOf="@+id/header_image"
+                app:layout_constraintTop_toBottomOf="@+id/app_title_staff_home" />
+
+            <TextView
+                android:id="@+id/Option_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/option_text"
+                app:layout_constraintStart_toStartOf="@+id/Update_staff_button"
+                app:layout_constraintTop_toBottomOf="@+id/Staff_text" />
+
+            <Button
+                android:id="@+id/View_all_bookingBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="View_Booking"
+                android:text="@string/view_bookingBtn"
+                app:layout_constraintEnd_toEndOf="@+id/Update_staff_button"
+                app:layout_constraintStart_toStartOf="@+id/Update_staff_button"
+                app:layout_constraintTop_toBottomOf="@+id/Update_staff_button" />
+
+            <Button
+                android:id="@+id/Verify_CodeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="VerifyCode"
+                android:text="Verify Code"
+                app:layout_constraintEnd_toEndOf="@+id/Update_staff_button"
+                app:layout_constraintStart_toStartOf="@+id/Update_staff_button"
+                app:layout_constraintTop_toBottomOf="@+id/View_all_bookingBtn" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="Verify_QR_Code"
+                android:text="Scan QR"
+                app:layout_constraintEnd_toEndOf="@+id/Update_staff_button"
+                app:layout_constraintStart_toStartOf="@+id/Update_staff_button"
+                app:layout_constraintTop_toBottomOf="@+id/Verify_CodeBtn" />
+
+            <!--            <Button-->
+<!--                android:id="@+id/Go_to_BookBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:onClick="Go_to_Booking"-->
+<!--                android:text="@string/go_to_bookingBtn"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/header_image"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/header_image"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/View_bookingBtn" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
